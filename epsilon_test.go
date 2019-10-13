@@ -18,7 +18,7 @@ func TestEpsilon(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			eq := Epsilon(test.epsilon, test.v1, test.v2)
+			eq := CompareEpsilon(test.epsilon, test.v1, test.v2)
 			if eq != test.expequal {
 				t.Errorf("expect (%t) got (%t)", test.expequal, eq)
 			}
